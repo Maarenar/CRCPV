@@ -1,8 +1,8 @@
 /**
- * Open hamburger menu
+ * Close hamburger menu
  */
 
 function closeMenu(){
-    var i = document.getElementById("menutoggle");
+    var i = document.getElementById("menu");
     i.className = "menu_closed";
 }

@@ -7,14 +7,12 @@
     <body>
         <section id="accueil">
             <div class="slide_inside">
+                <?php include("php/header.php"); ?>
                 <h1>Commission régionale photo & vidéo</h1>
-                <i id="fleche" class="fal fa-arrow-down"></i>
-            <div>
+            </div>
         </section>
         <section id="slide_2">
-            <div class="slide_inside">
-            <?php include("php/header.php"); ?>
-            </div>
+            
         </section>
     </body>
 </html>
