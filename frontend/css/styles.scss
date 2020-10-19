@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'header';
+@import 'home';
+
+body{
+    margin: 0;
+    &:before{
+        position: fixed;
+        top: 88px;
+        left: 45px;
+        content: '';
+        width: 1px;
+        height: 100vh;
+        background-color: $secondary-blue;
+        z-index: 2;
+    }
+}

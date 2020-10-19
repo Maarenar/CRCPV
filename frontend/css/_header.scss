@@ -1,0 +1,131 @@
+header{
+    width: 100%;
+    position: fixed;
+    padding: 20px;
+    z-index: 999;
+    &:after{
+        position: absolute;
+        top: 45px;
+        right: -90px;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: $secondary-blue;
+    }
+    #burger{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: 1px solid $secondary-blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        .burger-line{
+            width: 40%;
+            margin-bottom: 3px;
+            background: linear-gradient(to left, $secondary-blue 50%, white 50%);
+            background-size: 200% 100%;
+            background-position:right bottom;
+            height: 1px;
+            z-index: 2;
+        }
+        #burger-mask{
+            background: linear-gradient(180deg, $primary-blue 0%, rgba(33,3,68,1) 50%, rgba(138,6,45,1) 100%);
+            width: 50px;
+            height: 50px;
+            max-height: 0;
+            position: absolute;
+            bottom: -1px;
+            transition: .5s;
+            z-index: 1;
+        }
+        &:hover > #burger-mask{
+            max-height: 50px;
+        }
+        &:hover > .burger-line{
+            background-position:left bottom;
+            transition:all .5s ease;
+        }
+    }
+}
+
+.nav-menu{
+    transform : translateX(100%);
+    ul{
+        opacity: 0;
+    }
+}
+
+.menu-show{
+    transform : translateX(0%);
+    transition: 1s ease;
+    max-width: 30%;
+    background-color: $primary-blue;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.3);
+    z-index: 10;
+    padding-top: 20px;
+    padding-left: 20px;
+    #times-icons{
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        position: relative;
+        &:before{
+            position: absolute;
+            top: 25px;
+            left: 10px;
+            content: '';
+            width: 30px;
+            background-color: white;
+            height: 1px;
+            transform: rotate(45deg);
+        }
+        &:after{
+            position: absolute;
+            top: 25px;
+            left: 10px;
+            content: '';
+            width: 30px;
+            background-color: white;
+            height: 1px;
+            transform: rotate(-45deg);
+        }
+    }
+    ul{
+        list-style: none;
+        position: relative;
+        padding: 40px 40px 40px 40px;
+        a{
+            @include ranchers;
+            font-size: 40px;
+            color: white;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: block;
+            transition:color 1s ease;
+            position: relative;
+            &:after{
+                position: absolute;
+                content: '';
+                height: 1px;
+                background-color: $secondary-blue;
+                width: 0;
+                transition: width 1s ease;
+            }
+            &:hover{
+                color: $secondary-blue;
+            }
+            &:hover::after{
+                width: 100%;
+            }
+        }
+    }
+}
+

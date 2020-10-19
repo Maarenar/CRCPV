@@ -1,0 +1,71 @@
+video{
+    width: 100%;
+    z-index: 1;
+}
+
+#accueil{
+    z-index: 1;
+    width: 100%;
+    position: relative;
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes slideup{
+    0%{
+        transform: translateY(200px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+#main-title{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 50px;
+    width: 100%;
+    z-index: 2;
+    h1{
+        @include patrick;
+        animation: fadein 3s;
+        font-size: 70px;
+        font-weight: 300;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    i{
+        font-size: 50px;
+        color: white;
+        animation: slideup 3s;
+    }
+}
+
+#panel-infini{
+    //height: 1000px;
+    padding: 50px;
+    position: relative;
+    top: -6px;
+    width: 100%;
+    background-image: url('../assets/img/banc-de-poissons.jpg');
+    background-position: right;
+    background-size: cover;
+    #panel-mask{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($color: #000000, $alpha: 0.85);
+    }
+}
