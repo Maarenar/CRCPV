@@ -1,49 +1,52 @@
 //FONTS
-@font-face {
-    font-family: 'Beautify';
-    src: url('Beautify.otf') format('otf'),
-         url('Beautify.ttf') format('ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Quicksand:wght@300;400;600&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Ranchers&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Patrick+Hand&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
-
-@mixin cormoran{
-    font-family: 'Cormorant Garamond';
-}
-
-@mixin merienda {
-    font-family: 'Merienda', cursive;
-}
-
-@mixin patrick{
-
-    font-family: 'Patrick Hand', cursive;
-}
-
-@mixin beautify{
-    font-family: 'Beautify', cursive;
-}
-
-@mixin indie {
+@mixin indieFlower{
     font-family: 'Indie Flower', cursive;
+    font-weight: 400;
 }
 
-@mixin ranchers {
-    font-family: 'Ranchers', cursive;
-}
-
-@mixin openSans {
+@mixin openSansLight{
     font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
 }
 
-*{
-    box-sizing: border-box;
+@mixin openSansBold{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+}
+
+@mixin openSansItalic{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+@mixin quicksandLight{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+
+@mixin quicksandRegular{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+@mixin quicksandBold{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
 }
 
 //COLORS
-$primary-blue: #022437;
-$secondary-blue: #078AD6;
+$blue-sections: rgba(2,36,55,1);
+$blue-dark-transparent: rgba(2,36,55,0.3);
+$blue-lines: rgba(7,138,214,0.7);
+$blue-titles: rgba(7,138,214,1);
+$blue-btn: rgba(1,26,40,1);
+
+//MEDIA QUERIES
+$large-desktop: "all and (min-width: 1500px)";
+$desktop-query: "all and (max-width: 1500px)";
+$tablet-query: "all and (max-width: 991px)";
+$mobile-query: "all and (max-width: 767px)";
+$small-mobile-query: "all and (max-width: 575px)";
