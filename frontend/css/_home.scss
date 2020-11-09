@@ -1,71 +1,206 @@
-video{
-    width: 100%;
-    z-index: 1;
-}
-
+/**************************************
+            ACCUEIL
+**************************************/
 #accueil{
-    z-index: 1;
-    width: 100%;
+    overflow: hidden;
     position: relative;
-}
-
-@keyframes fadein{
-    0%{
-        opacity: 0;
+    video{
+        width: 100%;
     }
-    100%{
-        opacity: 1;
-    }
-}
-
-@keyframes slideup{
-    0%{
-        transform: translateY(200px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-
-#main-title{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    bottom: 50px;
-    width: 100%;
-    z-index: 2;
-    h1{
-        @include patrick;
-        animation: fadein 3s;
-        font-size: 70px;
-        font-weight: 300;
-        color: white;
-        text-transform: uppercase;
-        text-align: center;
-    }
-    i{
-        font-size: 50px;
-        color: white;
-        animation: slideup 3s;
+    .title-container{
+        position: absolute;
+        bottom: 50px;
+        left: 30px;
+        display: flex;
+        align-items: center;
+        padding : 5px;
+        border: 1px solid #fff;
+        background-color: $blue-dark-transparent;
+        cursor: pointer;
+        .main-title{
+            text-transform: uppercase;
+            font-size: 25px;
+            margin: 0;
+        }
+        i{
+            color: #ffffff;
+            font-size: 20px;
+            margin-left: 20px;
+        }
     }
 }
 
-#panel-infini{
-    //height: 1000px;
-    padding: 50px;
+main{
+    background: url('../assets/img/banc-de-poissons.jpg') center no-repeat;
     position: relative;
     top: -6px;
-    width: 100%;
-    background-image: url('../assets/img/banc-de-poissons.jpg');
-    background-position: right;
-    background-size: cover;
-    #panel-mask{
+    .mask{
+        width: 100%;
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba($color: #000000, $alpha: 0.85);
+        background-color: rgba(0,0,0,0.9);
+        z-index: 1;
+    }
+    /**************************************
+                SECTION UN
+    **************************************/
+    .section-une{
+        z-index: 2;
+        position: relative;
+        width: 90%;
+        margin: auto;
+        padding: 150px 50px 50px 50px ;
+        &:before{
+            content: '';
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+            width: 700px;
+            height: 1px;
+            background-color: $blue-lines;
+        }
+        &:after{
+            content: '';
+                position: absolute;
+                bottom: 60px;
+                right: 0;
+                width: 1px;
+                height: 300px;
+                background-color: $blue-lines;
+        }
+        .section-title{
+            position: relative;
+            &:before{
+                content: '';
+                position: absolute;
+                top: -60px;
+                left: -55px;
+                width: 700px;
+                height: 1px;
+                background-color: $blue-lines;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                top: -60px;
+                left: -55px;
+                width: 1px;
+                height: 300px;
+                background-color: $blue-lines;
+            }
+        }
+        > p{
+            @extend .general-text;
+            width: 60%;
+        }
+        .citation{
+            padding: 30px;
+            width: 50%;
+            p:first-child{
+                color: #ffffff;
+                @include openSansItalic;
+                font-size: 20px;
+                margin-bottom: 0;
+            }
+            p:nth-child(2){
+                color: #ffffff;
+                @include openSansBold;
+                font-size: 20px;
+                position: relative;
+                padding-left: 50px;
+                margin-top: 5px;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    top: 14px;
+                    left: 24px;
+                    width: 20px;
+                    height: 1px;
+                    background-color: #ffffff;
+                }
+            }
+        }
+        img{
+            max-width: 600px;
+            position: absolute;
+            top: 150px;
+            right: 20px;
+        }
+    }
+    /**************************************
+                SECTION DEUX
+    **************************************/
+    .section-deux{
+        z-index: 2;
+        position: relative;
+        display: flex;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        max-width: 1500px;
+        @media #{$large-desktop}{
+            margin: auto;
+        }
+        div:first-child{
+            background-color: $blue-sections; 
+            padding: 50px;
+            p{
+                @extend .general-text;
+            }
+            .btn{
+                margin: 80px auto 0 auto;
+                display: block; 
+                text-align: center;
+            }
+        }    
+        #raies{
+            max-width: 600px;
+            display: block;
+            transform: scale(0.5);
+            opacity: 0;
+            transition: 1s;          
+            &.is-visible{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        #plongeur{
+            max-width: 600px;
+            display: block;
+            transform: scale(0.5);
+            opacity: 0;
+            transition: 2s;          
+            &.is-visible{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
+     /**************************************
+                SECTION TROIS
+    **************************************/
+    .section-trois{
+        z-index: 2;
+        position: relative;
+        display: flex;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        width: 90%;
+        margin: auto;
+        img{
+            max-width: 800px;
+        }
+        p{
+            @extend .general-text;
+        }
+        p:nth-child(3){
+            margin-bottom: 50px;
+        }
+        .btn{
+            margin-top: 50px;
+        }
     }
 }
+
