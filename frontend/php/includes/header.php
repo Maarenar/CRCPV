@@ -1,7 +1,7 @@
 <header>
     <a href="http://localhost:8888/CRPV/frontend/php/"><img id="logo" src="../assets/img/logo.png"></a>
     <div class="menu-container">
-        <img class="fas fa-bars"></img>
+        <i class="fas fa-bars"></i>
         <nav>
             <ul>
                 <a href=""><li>La commision centre</li></a>
