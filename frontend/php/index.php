@@ -17,7 +17,6 @@
             </video> 
         </section>
         <main>
-            <div class="mask"></div>
             <div class="section-une">
                 <h2 class="section-title">Découvrez un autre monde</h2>
                 <p>Le monde sous marin, avec plus de 220 000 espèces répertoriées , vous offre un panel 
