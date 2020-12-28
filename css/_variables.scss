@@ -1,6 +1,10 @@
 //FONTS
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Quicksand:wght@300;400;600&display=swap');
 
+//Quicksand : titres et menus
+//Open Sans : textes
+//Indie Flower : boutons
+
 @mixin indieFlower{
     font-family: 'Indie Flower', cursive;
     font-weight: 400;

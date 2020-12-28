@@ -22,6 +22,12 @@ p{
     @extend .general-text;
 }
 
+a{
+    text-decoration: none;
+    @include openSansLight;
+    color: #ffffff;
+}
+
 .general-text{
     @include openSansLight;
     font-size: 25px;
@@ -53,14 +59,15 @@ main{
     color: #ffffff;
     font-size: 25px;
     border: 1px solid $blue-lines;
-    background-color: $blue-btn;
-    padding: 10px;
+    background-color: transparent;
+    padding: 10px 20px;
     border-radius: 10px;
     width: 150px;
     &:hover{
-        background-color: transparent;
-        transition: 1s;
+        background-color: $blue-btn;
+        transition: .3s;
         cursor: pointer;
+        box-shadow: 5px 5px 5px 0 rgba(255,255,255,0.1);
     }
 }
 

@@ -1,9 +1,13 @@
 footer{
+    a, p {
+        color: #ffffff;
+        font-size: 20px;
+    }
     width: 100%;
     background-color: #000000; 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 50px;
     #contact{
         display: flex;
@@ -14,13 +18,11 @@ footer{
             font-size: 30px;
         }
     }
-    img{
-        width: 100px;
-        height: 100px;
-    }
-    #legal{
-        a,p{
-            color: #ffffff;
+    .logo-container{
+        display: flex;
+        align-items: center;
+        img{
+            max-width: 100%;
         }
     }
 }
