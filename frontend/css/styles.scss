@@ -1,36 +1,51 @@
 @import 'variables';
-@import 'header';
-@import 'footer';
-@import 'home';
+
+@import 'includes/header';
+@import 'includes/footer';
+
+@import 'pages/home';
+@import 'pages/commission';
+
+@import 'titles';
 
 body{
     margin: 0;
     padding: 0;
+    background-color: #000000;
 }
 
 *{
     box-sizing: border-box;
 }
 
-.main-title{
-    @include quicksandLight;
-    color: #fff;
-}
-
-.section-title{
-    @include quicksandRegular;
-    color: #ffffff;
-}
-
-.section-title{
-    text-transform: uppercase;
-    font-size: 35px;
+p{
+    @extend .general-text;
 }
 
 .general-text{
     @include openSansLight;
     font-size: 25px;
     color: #ffffff;
+}
+
+.blue-text{
+    color: $blue-titles
+}
+
+main{
+    background: url('../assets/img/banc-de-poissons.png') center;
+    position: relative;
+    top: -6px;
+    padding-top: 100px;
+}
+
+.pages-main{
+    .section-title{
+        font-size: 25px;
+    }
+    .general-text{
+        font-size: 20px;
+    }
 }
 
 .btn{

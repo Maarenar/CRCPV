@@ -1,0 +1,36 @@
+.main-title{
+    @include quicksandLight;
+    color: #fff;
+}
+
+.page-title{
+    @include quicksandLight;
+    font-size: 48px;
+    color: #ffffff;
+    z-index: 2;
+    position: relative;
+    padding: 20px;
+    width: 60%;
+    &:after{
+        content: '';
+        position: absolute;
+        left: 20px;
+        bottom: 0;
+        width: 30%;
+        height: 2px;
+        background-color: $blue-lines;
+    }
+}
+
+.page-subtitle{
+    width: 60%;
+    padding-left: 20px;
+    @extend .general-text;
+}
+
+.section-title{
+    font-size: 30px;
+    @include quicksandRegular;
+    color: #ffffff;
+    text-transform: uppercase;
+}

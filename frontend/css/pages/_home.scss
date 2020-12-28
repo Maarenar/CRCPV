@@ -1,0 +1,190 @@
+/**************************************
+            ACCUEIL
+**************************************/
+#accueil{
+    overflow: hidden;
+    position: relative;
+    video{
+        width: 100%;
+    }
+    .title-container{
+        position: absolute;
+        bottom: 50px;
+        left: 30px;
+        display: flex;
+        align-items: center;
+        padding : 5px;
+        border: 1px solid #fff;
+        background-color: $blue-dark-transparent;
+        cursor: pointer;
+        .main-title{
+            text-transform: uppercase;
+            font-size: 25px;
+            margin: 0;
+        }
+        i{
+            color: #ffffff;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+    }
+}
+/**************************************
+            SECTION UN
+**************************************/
+.section-une{
+    z-index: 2;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    padding: 50px 50px 50px 50px ;
+    &:before{
+        content: '';
+        position: absolute;
+        bottom: 60px;
+        right: 0;
+        width: 700px;
+        height: 1px;
+        background-color: $blue-lines;
+    }
+    &:after{
+        content: '';
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+            width: 1px;
+            height: 300px;
+            background-color: $blue-lines;
+    }
+    .section-title{
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: -55px;
+            width: 700px;
+            height: 1px;
+            background-color: $blue-lines;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: -55px;
+            width: 1px;
+            height: 300px;
+            background-color: $blue-lines;
+        }
+    }
+    > p{
+        @extend .general-text;
+        width: 60%;
+    }
+    .citation{
+        padding: 30px;
+        width: 50%;
+        p:first-child{
+            color: #ffffff;
+            @include openSansItalic;
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+        p:nth-child(2){
+            color: #ffffff;
+            @include openSansBold;
+            font-size: 20px;
+            position: relative;
+            padding-left: 50px;
+            margin-top: 5px;
+            &:before{
+                content: '';
+                position: absolute;
+                top: 14px;
+                left: 24px;
+                width: 20px;
+                height: 1px;
+                background-color: #ffffff;
+            }
+        }
+    }
+    img{
+        max-width: 600px;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+    }
+}
+/**************************************
+            SECTION DEUX
+**************************************/
+.section-deux{
+    z-index: 2;
+    position: relative;
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    max-width: 1500px;
+    @media #{$large-desktop}{
+        margin: auto;
+    }
+    div:first-child{
+        background-color: $blue-sections; 
+        padding: 50px;
+        p{
+            @extend .general-text;
+        }
+        .btn{
+            margin: 80px auto 0 auto;
+            display: block; 
+            text-align: center;
+        }
+    }    
+    #raies{
+        max-width: 600px;
+        display: block;
+        transform: scale(0.5);
+        opacity: 0;
+        transition: 1s;          
+        &.is-visible{
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    #plongeur{
+        max-width: 600px;
+        display: block;
+        transform: scale(0.5);
+        opacity: 0;
+        transition: 2s;          
+        &.is-visible{
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+    /**************************************
+            SECTION TROIS
+**************************************/
+.section-trois{
+    z-index: 2;
+    position: relative;
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 90%;
+    margin: auto;
+    img{
+        max-width: 800px;
+    }
+    p{
+        @extend .general-text;
+    }
+    p:nth-child(3){
+        margin-bottom: 50px;
+    }
+    .btn{
+        margin-top: 50px;
+    }
+}
+
