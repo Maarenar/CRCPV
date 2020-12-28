@@ -1,0 +1,52 @@
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Quicksand:wght@300;400;600&display=swap');
+
+@mixin indieFlower{
+    font-family: 'Indie Flower', cursive;
+    font-weight: 400;
+}
+
+@mixin openSansLight{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+}
+
+@mixin openSansBold{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+}
+
+@mixin openSansItalic{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+@mixin quicksandLight{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+
+@mixin quicksandRegular{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+@mixin quicksandBold{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+//COLORS
+$blue-sections: rgba(2,36,55,1);
+$blue-dark-transparent: rgba(2,36,55,0.3);
+$blue-lines: rgba(7,138,214,0.7);
+$blue-titles: rgba(7,138,214,1);
+$blue-btn: rgba(1,26,40,1);
+
+//MEDIA QUERIES
+$large-desktop: "all and (min-width: 1500px)";
+$desktop-query: "all and (max-width: 1500px)";
+$tablet-query: "all and (max-width: 991px)";
+$mobile-query: "all and (max-width: 767px)";
+$small-mobile-query: "all and (max-width: 575px)";

@@ -1,0 +1,35 @@
+#placeholder-video{
+    width: 80%;
+    height: 500px;
+    background-color: seashell;
+    margin: 100px auto 0 auto;
+}
+
+#equipe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    .photo-container{
+        position: relative;
+        margin-right: 50px;
+        width: 40%;
+        display: flex;
+        justify-content: end;
+        img{
+            &:first-child{
+                position: absolute;
+                right: 222px;
+                top: 74px;  
+                border: 10px solid #ffffff;
+            }
+            &:nth-child(2){
+                max-height: 500px;
+            }
+        }
+    }
+    .commission-text{
+        width: 30%;
+        width: 40%;
+    }
+}
