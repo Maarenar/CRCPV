@@ -50,7 +50,8 @@ $blue-btn: rgba(1,26,40,1);
 
 //MEDIA QUERIES
 $large-desktop: "all and (min-width: 1500px)";
-$desktop-query: "all and (max-width: 1500px)";
-$tablet-query: "all and (max-width: 991px)";
+$desktop-query: "all and (max-width: 1200px)";
+$min-desktop-query: "all and (min-width: 993px)";
+$tablet-query: "all and (max-width: 992px)";
 $mobile-query: "all and (max-width: 767px)";
 $small-mobile-query: "all and (max-width: 575px)";

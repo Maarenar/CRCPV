@@ -8,7 +8,7 @@ header {
   padding: 20px;
 }
 header #logo {
-  max-width: 80px;
+  max-width: 55px;
 }
 header .menu-container {
   width: 85%;
@@ -16,14 +16,28 @@ header .menu-container {
 header .menu-container i {
   display: none;
 }
-header .menu-container ul {
+@media all and (max-width: 992px) {
+  header .menu-container i {
+    display: block;
+    text-align: right;
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+@media all and (max-width: 992px) {
+  header .menu-container nav {
+    display: none;
+  }
+}
+header .menu-container nav ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
   margin: 0;
   padding: 0;
 }
-header .menu-container ul a {
+header .menu-container nav ul a {
   display: block;
   padding: 20px;
   color: #ffffff;
@@ -33,9 +47,66 @@ header .menu-container ul a {
   text-transform: uppercase;
   transition: 1s;
 }
-header .menu-container ul a:hover {
+header .menu-container nav ul a:hover {
   cursor: pointer;
   background-color: rgba(7, 138, 214, 0.7);
+}
+@media all and (max-width: 1200px) {
+  header .menu-container nav ul a {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+#nav-menu::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 32px;
+  transform: rotate(45deg);
+  width: 2px;
+  height: 45px;
+  background-color: #fff;
+  cursor: pointer;
+}
+@media all and (min-width: 993px) {
+  #nav-menu::before {
+    display: none;
+  }
+}
+#nav-menu::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 32px;
+  transform: rotate(-45deg);
+  width: 2px;
+  height: 45px;
+  background-color: #fff;
+  cursor: pointer;
+}
+@media all and (min-width: 993px) {
+  #nav-menu::after {
+    display: none;
+  }
+}
+#nav-menu.mobile-menu {
+  background: url("../assets/img/banc-de-poissons.png") center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+}
+#nav-menu.mobile-menu ul {
+  padding-top: 50px;
+  flex-direction: column;
+}
+#nav-menu.mobile-menu ul a {
+  font-size: 27px;
+  line-height: 70px;
 }
 
 footer {
@@ -46,6 +117,15 @@ footer {
   align-items: flex-start;
   padding: 50px;
 }
+@media all and (max-width: 992px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+footer div {
+  text-align: center;
+}
 footer a, footer p {
   color: #ffffff;
   font-size: 20px;
@@ -55,6 +135,11 @@ footer #contact {
   flex-direction: column;
   align-items: center;
 }
+@media all and (max-width: 575px) {
+  footer #contact {
+    margin-bottom: 30px;
+  }
+}
 footer #contact i {
   color: #ffffff;
   font-size: 30px;
@@ -62,6 +147,11 @@ footer #contact i {
 footer .logo-container {
   display: flex;
   align-items: center;
+}
+@media all and (max-width: 575px) {
+  footer .logo-container {
+    flex-direction: column;
+  }
 }
 footer .logo-container img {
   max-width: 100%;
@@ -77,6 +167,20 @@ footer .logo-container img {
 #accueil video {
   width: 100%;
 }
+@media all and (max-width: 767px) {
+  #accueil video {
+    display: none;
+  }
+}
+#accueil #accueil-mobile {
+  display: none;
+}
+@media all and (max-width: 767px) {
+  #accueil #accueil-mobile {
+    display: block;
+    width: 100%;
+  }
+}
 #accueil .title-container {
   position: absolute;
   bottom: 50px;
@@ -91,6 +195,11 @@ footer .logo-container img {
   width: 100%;
   text-align: center;
 }
+@media all and (max-width: 992px) {
+  #accueil .title-container i {
+    display: none;
+  }
+}
 
 /**************************************
             SECTION UN
@@ -100,7 +209,17 @@ footer .logo-container img {
   position: relative;
   width: 90%;
   margin: auto;
-  padding: 50px 50px 50px 50px;
+  padding: 50px;
+}
+@media all and (max-width: 767px) {
+  .section-une {
+    width: 100%;
+  }
+}
+@media all and (max-width: 575px) {
+  .section-une {
+    padding: 50px 20px 20px 20px;
+  }
 }
 .section-une:before {
   content: "";
@@ -111,6 +230,11 @@ footer .logo-container img {
   height: 1px;
   background-color: rgba(7, 138, 214, 0.7);
 }
+@media all and (max-width: 767px) {
+  .section-une:before {
+    display: none;
+  }
+}
 .section-une:after {
   content: "";
   position: absolute;
@@ -119,6 +243,11 @@ footer .logo-container img {
   width: 1px;
   height: 300px;
   background-color: rgba(7, 138, 214, 0.7);
+}
+@media all and (max-width: 767px) {
+  .section-une:after {
+    display: none;
+  }
 }
 .section-une .section-title {
   position: relative;
@@ -132,6 +261,11 @@ footer .logo-container img {
   height: 1px;
   background-color: rgba(7, 138, 214, 0.7);
 }
+@media all and (max-width: 767px) {
+  .section-une .section-title:before {
+    display: none;
+  }
+}
 .section-une .section-title:after {
   content: "";
   position: absolute;
@@ -141,12 +275,38 @@ footer .logo-container img {
   height: 300px;
   background-color: rgba(7, 138, 214, 0.7);
 }
+@media all and (max-width: 767px) {
+  .section-une .section-title:after {
+    display: none;
+  }
+}
 .section-une > p {
   width: 60%;
+}
+@media all and (max-width: 992px) {
+  .section-une > p {
+    width: 100%;
+  }
 }
 .section-une .citation {
   padding: 30px;
   width: 50%;
+}
+@media all and (max-width: 992px) {
+  .section-une .citation {
+    width: 67%;
+  }
+}
+@media all and (max-width: 767px) {
+  .section-une .citation {
+    width: 100%;
+  }
+}
+@media all and (max-width: 575px) {
+  .section-une .citation {
+    padding: 30px 0 0 0;
+    text-align: center;
+  }
 }
 .section-une .citation p:first-child {
   color: #ffffff;
@@ -165,6 +325,11 @@ footer .logo-container img {
   padding-left: 50px;
   margin-top: 5px;
 }
+@media all and (max-width: 575px) {
+  .section-une .citation p:nth-child(2) {
+    padding-left: 30px;
+  }
+}
 .section-une .citation p:nth-child(2):before {
   content: "";
   position: absolute;
@@ -174,11 +339,33 @@ footer .logo-container img {
   height: 1px;
   background-color: #ffffff;
 }
+@media all and (max-width: 575px) {
+  .section-une .citation p:nth-child(2):before {
+    left: 15px;
+  }
+}
 .section-une img {
   max-width: 600px;
   position: absolute;
   top: 50px;
   right: 20px;
+}
+@media all and (max-width: 1200px) {
+  .section-une img {
+    max-width: 400px;
+    top: 150px;
+  }
+}
+@media all and (max-width: 992px) {
+  .section-une img {
+    max-width: 300px;
+    top: 350px;
+  }
+}
+@media all and (max-width: 767px) {
+  .section-une img {
+    display: none;
+  }
 }
 
 /**************************************
@@ -188,41 +375,87 @@ footer .logo-container img {
   z-index: 2;
   position: relative;
   display: flex;
+  justify-content: center;
   padding-top: 100px;
   padding-bottom: 100px;
-  max-width: 1500px;
+  width: 100%;
 }
-@media all and (min-width: 1500px) {
+@media all and (max-width: 1200px) {
   .section-deux {
-    margin: auto;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+  }
+}
+@media all and (max-width: 575px) {
+  .section-deux {
+    padding-top: 0;
   }
 }
 .section-deux div:first-child {
   background-color: #022437;
   padding: 50px;
+  width: 42%;
+}
+@media all and (max-width: 1200px) {
+  .section-deux div:first-child {
+    width: 100%;
+  }
+}
+@media all and (max-width: 575px) {
+  .section-deux div:first-child {
+    padding: 20px;
+  }
 }
 .section-deux div:first-child .btn {
   margin: 80px auto 0 auto;
   display: block;
   text-align: center;
 }
+@media all and (max-width: 1200px) {
+  .section-deux div:nth-child(2) {
+    display: flex;
+  }
+}
 .section-deux #raies {
+  width: 100%;
   max-width: 600px;
   display: block;
   transform: scale(0.5);
   opacity: 0;
   transition: 1s;
 }
+@media all and (max-width: 1200px) {
+  .section-deux #raies {
+    max-width: 495px;
+  }
+}
+@media all and (max-width: 992px) {
+  .section-deux #raies {
+    width: 100%;
+    max-width: none;
+  }
+}
 .section-deux #raies.is-visible {
   opacity: 1;
   transform: scale(1);
 }
 .section-deux #plongeur {
+  width: 100%;
   max-width: 600px;
   display: block;
   transform: scale(0.5);
   opacity: 0;
   transition: 2s;
+}
+@media all and (max-width: 1200px) {
+  .section-deux #plongeur {
+    max-width: 495px;
+  }
+}
+@media all and (max-width: 992px) {
+  .section-deux #plongeur {
+    display: none;
+  }
 }
 .section-deux #plongeur.is-visible {
   opacity: 1;
@@ -238,11 +471,30 @@ footer .logo-container img {
   display: flex;
   padding-top: 100px;
   padding-bottom: 100px;
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
+@media all and (max-width: 1200px) {
+  .section-trois {
+    padding-top: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px 50px 50px;
+  }
+}
+@media all and (max-width: 1200px) {
+  .section-trois > div {
+    text-align: center;
+  }
+}
 .section-trois img {
-  max-width: 800px;
+  max-width: 600px;
+  width: 100%;
+}
+@media all and (max-width: 767px) {
+  .section-trois img {
+    max-width: 400px;
+  }
 }
 .section-trois p:nth-child(3) {
   margin-bottom: 50px;
@@ -293,6 +545,12 @@ footer .logo-container img {
   font-size: 40px;
   text-align: center;
 }
+@media all and (max-width: 575px) {
+  .main-title {
+    font-size: 25px;
+    text-align: left;
+  }
+}
 
 .page-title {
   font-family: "Quicksand", sans-serif;
@@ -326,6 +584,11 @@ footer .logo-container img {
   color: #ffffff;
   text-transform: uppercase;
 }
+@media all and (max-width: 575px) {
+  .section-title {
+    font-size: 25px;
+  }
+}
 
 body {
   margin: 0;
@@ -350,6 +613,11 @@ a {
   font-size: 25px;
   color: #ffffff;
 }
+@media all and (max-width: 575px) {
+  .general-text, .section-une > p, .section-deux div:first-child p, .section-trois p, .page-subtitle, p {
+    font-size: 20px;
+  }
+}
 
 .blue-text {
   color: #078ad6;
@@ -361,12 +629,23 @@ main {
   top: -6px;
   padding-top: 100px;
 }
+@media all and (max-width: 767px) {
+  main {
+    padding-top: 0;
+  }
+}
 
 .pages-main .section-title {
   font-size: 25px;
 }
 .pages-main .general-text, .pages-main .section-deux div:first-child p, .section-deux div:first-child .pages-main p, .pages-main .page-subtitle, .pages-main p {
   font-size: 20px;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .btn {
@@ -379,6 +658,11 @@ main {
   padding: 10px 20px;
   border-radius: 10px;
   width: 150px;
+}
+@media all and (max-width: 575px) {
+  .btn {
+    font-size: 16px;
+  }
 }
 .btn:hover {
   background-color: #011a28;

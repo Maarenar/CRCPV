@@ -6,34 +6,97 @@ header{
     z-index: 10;
     padding: 20px;
     #logo{
-        max-width: 80px;
+        max-width: 55px;
     }
     .menu-container{
         width: 85%;
         i{
             display: none;
-        }
-        ul{
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            margin: 0;
-            padding: 0;
-            a{
+            @media #{$tablet-query}{
                 display: block;
-                padding: 20px;
-                color: #ffffff;
-                @include quicksandRegular;
-                font-size: 16px;
-                text-transform: uppercase;
-                transition: 1s;
-                &:hover{
-                    cursor: pointer;
-                    background-color: $blue-lines;
+                text-align: right;
+                font-size: 35px;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+        nav{
+            @media #{$tablet-query}{
+                display: none;
+            }
+            ul{
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                margin: 0;
+                padding: 0;
+                a{
+                    display: block;
+                    padding: 20px;
+                    color: #ffffff;
+                    @include quicksandRegular;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    transition: 1s;
+                    &:hover{
+                        cursor: pointer;
+                        background-color: $blue-lines;
+                    }
+                    @media #{$desktop-query}{
+                        font-size: 15px;
+                        text-align: center;
+                    }
                 }
             }
         }
     }
-    
 }
 
+#nav-menu{
+    &::before{
+        content: '';
+        position: absolute;
+        top: 8px;
+        right: 32px;
+        transform: rotate(45deg);
+        width: 2px;
+        height: 45px;
+        background-color: #fff;
+        cursor: pointer;
+        @media #{$min-desktop-query}{
+            display: none;
+        }
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 8px;
+        right: 32px;
+        transform: rotate(-45deg);
+        width: 2px;
+        height: 45px;
+        background-color: #fff;
+        cursor: pointer;
+        @media #{$min-desktop-query}{
+            display: none;
+        }
+    }
+    &.mobile-menu{
+        background: url('../assets/img/banc-de-poissons.png') center;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        ul{
+            padding-top: 50px;
+            flex-direction: column;
+            a{
+                font-size: 27px;
+                line-height: 70px;
+            }
+        }
+    }
+}
