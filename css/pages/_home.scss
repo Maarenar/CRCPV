@@ -1,0 +1,291 @@
+/**************************************
+            ACCUEIL
+**************************************/
+#accueil{
+    overflow: hidden;
+    position: relative;
+    video{
+        width: 100%;
+        @media #{$mobile-query}{
+            display: none;
+        }
+    }
+    #accueil-mobile{
+        display: none;
+        @media #{$mobile-query}{
+            display: block;
+            width: 100%;
+        }
+    }
+    .title-container{
+        position: absolute;
+        bottom: 50px;
+        left: 30px;
+        padding : 5px;
+        cursor: pointer;
+        width: 100%;
+        i{
+            color: #ffffff;
+            font-size: 40px;
+            width: 100%;
+            text-align: center;
+            @media #{$tablet-query}{
+                display: none;
+            }
+        }
+    }
+}
+/**************************************
+            SECTION UN
+**************************************/
+.section-une{
+    z-index: 2;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    padding: 50px;
+    @media #{$mobile-query}{
+        width: 100%;
+    }
+    @media #{$small-mobile-query}{
+        padding: 50px 20px 20px 20px;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        bottom: 60px;
+        right: 0;
+        width: 700px;
+        height: 1px;
+        background-color: $blue-lines;
+        @media #{$mobile-query}{
+            display: none;
+        }
+    }
+    &:after{
+        content: '';
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+            width: 1px;
+            height: 300px;
+            background-color: $blue-lines;
+            @media #{$mobile-query}{
+                display: none;
+            }
+    }
+    .section-title{
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: -55px;
+            width: 700px;
+            height: 1px;
+            background-color: $blue-lines;
+            @media #{$mobile-query}{
+                display: none;
+            }
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: -55px;
+            width: 1px;
+            height: 300px;
+            background-color: $blue-lines;
+            @media #{$mobile-query}{
+                display: none;
+            }
+        }
+    }
+    > p{
+        @extend .general-text;
+        width: 60%;
+        @media #{$tablet-query}{
+            width: 100%;
+        }
+    }
+    .citation{
+        padding: 30px;
+        width: 50%;
+        @media #{$tablet-query}{
+            width: 67%;
+        }
+        @media #{$mobile-query}{
+            width: 100%;
+         }
+         @media #{$small-mobile-query}{
+            padding: 30px 0 0 0;
+            text-align: center;
+        }
+        p:first-child{
+            color: #ffffff;
+            @include openSansItalic;
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+        p:nth-child(2){
+            color: #ffffff;
+            @include openSansBold;
+            font-size: 20px;
+            position: relative;
+            padding-left: 50px;
+            margin-top: 5px;
+            @media #{$small-mobile-query}{
+                padding-left: 30px;
+            }
+            &:before{
+                content: '';
+                position: absolute;
+                top: 14px;
+                left: 24px;
+                width: 20px;
+                height: 1px;
+                background-color: #ffffff;
+                @media #{$small-mobile-query}{
+                   left: 15px;
+                }
+            }
+        }
+    }
+    img{
+        max-width: 600px;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        @media #{$desktop-query}{
+            max-width: 400px;
+            top: 150px;
+        }
+        @media #{$tablet-query}{
+            max-width: 300px;
+            top: 350px;
+        }
+        @media #{$mobile-query}{
+            display: none;
+        }
+    }
+}
+/**************************************
+            SECTION DEUX
+**************************************/
+.section-deux{
+    z-index: 2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 100%;
+    @media #{$desktop-query}{
+        flex-direction: column-reverse;
+        padding-bottom: 50px;
+    }
+    @media #{$small-mobile-query}{
+        padding-top: 0;
+    }
+    div:first-child{
+        background-color: $blue-sections; 
+        padding: 50px;
+        width: 42%;
+        @media #{$desktop-query}{
+            width: 100%;
+        }
+        @media #{$small-mobile-query}{
+            padding: 20px;
+        }
+        p{
+            @extend .general-text;
+        }
+        .btn{
+            margin: 80px auto 0 auto;
+            display: block; 
+            text-align: center;
+        }
+    }  
+    div:nth-child(2){
+        @media #{$desktop-query}{
+            display: flex;
+        }
+    }  
+    #raies{
+        width: 100%;
+        max-width: 600px;
+        display: block;
+        transform: scale(0.5);
+        opacity: 0;
+        transition: 1s;   
+        @media #{$desktop-query}{
+            max-width: 579px;
+        }   
+        @media #{$tablet-query}{
+            width: 100%;
+            max-width: none;
+        }      
+        &.is-visible{
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    #plongeur{
+        width: 100%;
+        max-width: 600px;
+        display: block;
+        transform: scale(0.5);
+        opacity: 0;
+        transition: 2s; 
+        @media #{$desktop-query}{
+            max-width: 579px;
+        }  
+        @media #{$tablet-query}{
+            display: none;
+        }          
+        &.is-visible{
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+    /**************************************
+            SECTION TROIS
+**************************************/
+.section-trois{
+    z-index: 2;
+    position: relative;
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 100%;
+    margin: auto;
+    @media #{$desktop-query}{
+        padding-top: 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 50px 50px 50px;
+    }
+    >div{
+        @media #{$desktop-query}{
+            text-align: center;
+        }
+    }
+    img{
+        max-width: 600px; 
+        width: 100%;
+        @media #{$mobile-query}{
+            max-width: 400px; 
+        }
+    }
+    p{
+        @extend .general-text;
+    }
+    p:nth-child(3){
+        margin-bottom: 50px;
+    }
+    .btn{
+        margin-top: 50px;
+    }
+}
+

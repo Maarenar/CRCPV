@@ -1,0 +1,109 @@
+@import 'variables';
+
+@import 'includes/header';
+@import 'includes/footer';
+
+@import 'pages/home';
+@import 'pages/commission';
+
+@import 'titles';
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+p{
+    @extend .general-text;
+}
+
+a{
+    text-decoration: none;
+    @include openSansLight;
+    color: #ffffff;
+}
+
+.general-text{
+    @include openSansLight;
+    font-size: 25px;
+    color: #ffffff;
+    @media #{$small-mobile-query}{
+        font-size: 20px;
+    }
+}
+
+.blue-text{
+    color: $blue-titles
+}
+
+main{
+    background: url('../assets/img/banc-de-poissons.png') center;
+    position: relative;
+    top: -6px;
+    padding-top: 100px;
+    @media #{$mobile-query}{
+       padding-top: 0;
+    }
+}
+
+.en-construction{
+    height: 1000px;
+    padding-top: 100px;
+}
+
+.pages-main{
+    .section-title{
+        font-size: 25px;
+    }
+    .general-text{
+        font-size: 20px;
+    }
+}
+
+.page-container{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    @media #{$desktop-query}{
+        padding: 20px;
+    }
+}
+
+.btn{
+    @include indieFlower;
+    color: #ffffff;
+    font-size: 25px;
+    border: 1px solid $blue-lines;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    @media #{$small-mobile-query}{
+        font-size: 16px;
+    }
+    &:hover{
+        background-color: $blue-btn;
+        transition: .3s;
+        cursor: pointer;
+        box-shadow: 5px 5px 5px 0 rgba(255,255,255,0.1);
+    }
+    &.large{
+        width: 300px;
+    }
+}
+
+.sr-only{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  }
+  
