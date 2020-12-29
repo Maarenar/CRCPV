@@ -9,7 +9,8 @@
         <header>
             <a href="index.html"><img id="logo" src="assets/img/logo.png"></a>
             <div class="menu-container">
-                <i id="open-menu" class="fas fa-bars"></i>
+                <i class="fas fa-bars"></i>
+                <input id="open-menu" aria-label="Cocher pour ouvrir le menu de navigation" type="checkbox" >
                 <nav id="nav-menu">
                     <ul>
                         <a href="commission.html"><li>La commision centre</li></a>
@@ -34,7 +35,6 @@
 
         <main>
             <div class="page-container">
-                
                 <div class="section-une" id="section-une">
                     <h2 class="section-title">Découvrez un autre monde</h2>
                     <p>Le monde sous marin, avec plus de 220 000 espèces répertoriées , vous offre un panel 
@@ -65,7 +65,7 @@
                         <p>Vous êtes débutant ou pratiquant ? Venez vous former  avec nous, ou approfondir votre 
                             sens artistique à travers un enseignement convivial  et une equipe chaleureuse.
                         </p>
-                        <a href="" class="btn">Découvrir</a>
+                        <a href="commission.html" class="btn">Découvrir</a>
                     </div>
                     <div>
                         <img class="show-on-scroll" id="raies" src="assets/img/home/raies.jpg">
@@ -81,7 +81,7 @@
                         <p>Les formations sont organisées soit sur plusieurs jours tout au long de l’année, 
                             soit lors d’un séjour en mer de 5 jours.
                         </p>
-                        <a class="btn" href="">Nos formations en détails</a>
+                        <a class="btn" href="formation.html">Nos formations en détails</a>
                     </div>
                 </section>
             </div>
@@ -102,53 +102,13 @@
 
             </div>
             <div>
-                <a href="">Mentions légales</a>
+                <a href="mentions-legales.html">Mentions légales</a>
                 <p> CRC PV © 2020</p>
-                <a href="">Création du site : RWD - Marion Renard</a>
+                <a target="_blank" href="http://rwd-marionrenard.fr/">Création du site : RWD - Marion Renard</a>
             </div>
         </footer>
-
+        <script src="js/ui-controls.js"></script>
     </body>
-    <script type="text/javascript" src="js/ui-controls.js"></script>
-<script type="text/javascript">
-
-    /*
-    * ANIMATION ON SCROLL
-    */
-    var scroll = window.requestAnimationFrame ||
-    function(callback){ window.setTimeout(callback, 1000/60)};
-    var elementsToShow = document.querySelectorAll('.show-on-scroll');
-
-    function isElementInViewport(el) {
-        var rect = el.getBoundingClientRect();
-        return (
-            (rect.top <= 0
-                && rect.bottom >= 0)
-            ||
-            (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-            ||
-            (rect.top >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-        );
-    }
-
-    function loop() {
-
-        elementsToShow.forEach(function (element) {
-            if (isElementInViewport(element)) {
-                element.classList.add('is-visible');
-            } else {
-                element.classList.remove('is-visible');
-            }
-        });
-
-        scroll(loop);
-    }
-
-    loop();
-
-</script>
 </html>
 
 

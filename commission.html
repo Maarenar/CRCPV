@@ -9,7 +9,8 @@
         <header>
             <a href="index.html"><img id="logo" src="assets/img/logo.png"></a>
             <div class="menu-container">
-                <i id="open-menu" class="fas fa-bars"></i>
+                <i class="fas fa-bars"></i>
+                <input id="open-menu" aria-label="Cocher pour ouvrir le menu de navigation" type="checkbox" >
                 <nav id="nav-menu">
                     <ul>
                         <a href="commission.html"><li>La commision centre</li></a>
@@ -24,16 +25,19 @@
 
         <main class="pages-main">
             <div class="page-container">
-                <h1 class="page-title">La commission régionale centre photo et vidéo</h1>
-                <h2 class="page-subtitle">La CRC PV est une commission culturelle et sportive du comité Centre de
-                    la <span class="blue-text">Fédération Française et d‘ études Sous Marine</span> (FFESSM).
-                </h2>
-                <div id="placeholder-video"></div>
-                <section id="equipe">
-                    <div class="photo-container">
-                        <img src="assets/img/commission/piscine.jpg">
-                        <img src="assets/img/commission/photo-palme.jpg">
+                <section class="title-and-video">
+                    <div>
+                        <h1 class="page-title">La commission régionale centre photo et vidéo</h1>
+                        <h2 class="page-subtitle">La CRC PV est une commission culturelle et sportive du comité Centre de
+                            la <span class="blue-text">Fédération Française et d‘ études Sous Marine</span> (FFESSM).
+                        </h2>
                     </div>
+                    <video autoplay muted loop>
+                        <source src="assets/videos/piscine.mp4" type="video/mp4">
+                    </video> 
+                </section>
+                <section id="equipe">
+                    <img src="assets/img/commission/photo-palme.jpg">
                     <div class="commission-text">
                         <h3 class="section-title">Une équipe de passionnés</h3>
                         <p>Depuis 20 ans, nous faisons découvrir et formons à la photo et vidéo subaquatique 
@@ -45,6 +49,60 @@
                         <p>Vous pratiquez déjà la photo ou la vidéo subaquatique? Venez partager votre 
                             expérience avec nous ! 
                         </p>
+                    </div>
+                </section>
+                <section id="historique">
+                    <div>
+                        <h3 class="section-title">Historique de la commission</h3>
+                        <p>La Commission Photo Vidéo de la Région Centre a été créée  le 3 février 2001 à 
+                            l’occasion de l’assemblée régionale centre à la maison des sports à Parçay Meslay.</p>
+                        <p>Gilbert Benoit, alors secrétaire de la commission nationale photo vidéo, a été élu 
+                            président, Patrick Lebras, secrétaire et Pierre Ferrer,  trésorier.</p>
+                        <p>Dominique Rouzaud puis Patrick Lebras ont assuré la présidence de la commission.</p>
+                        <p>Depuis L’AG  2017, Dominique Renard est président de la Commission Régionale Centre 
+                            Photo Vidéo.</p>
+                    </div>
+                    <div class="img-grid">
+                        <figure>
+                            <img src="assets/img/commission/gilbert.png">
+                            <figcaption class="general-text">Gilbert Benoit</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="assets/img/commission/patrick.png">
+                            <figcaption class="general-text">Patirck Lebras</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="assets/img/commission/dominique.png">
+                            <figcaption class="general-text">Dominique Renard</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="assets/img/commission/pierre.jpg">
+                            <figcaption class="general-text">Pierre Ferrer</figcaption>
+                        </figure>
+                    </div>
+                </section>
+                <section id="constitution">
+                    <h3 class="section-title">Constitution de la commission</h3>
+                    <div>
+                        <img src="assets/img/commission/denise.png">
+                        <img src="assets/img/commission/patrick-2.png">
+                        <img src="assets/img/commission/dominique-2.png">
+                        <img src="assets/img/commission/eric.png">
+                        <img src="assets/img/commission/mylene.png">
+                        <img src="assets/img/commission/joel.png">
+                    </div>
+                </section>
+                <section id="contact-and-cr">
+                    <h3 class="section-title">Contact et comptes-rendus</h3>
+                    <div>
+                        <div>
+                            <p>Pour nous contacter, c'est par ici</p>
+                            <a href="contact.html" class="btn">Contact</a>
+                        </div>
+                        <div>
+                            <p>Pour les comptes-rendus de nos assemblées générales, c'est là</p>
+                            <a href="comptes-rendus.html" class="btn large">Comptes-rendus</a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -65,12 +123,12 @@
 
             </div>
             <div>
-                <a href="">Mentions légales</a>
+                <a href="mentions-legales.html">Mentions légales</a>
                 <p> CRC PV © 2020</p>
-                <a href="">Création du site : RWD - Marion Renard</a>
+                <a target="_blank" href="http://rwd-marionrenard.fr/">Création du site : RWD - Marion Renard</a>
             </div>
         </footer>
-        <script type="text/javascript" src="js/ui-controls.js"></script>
+        <script src="js/ui-controls.js"></script>
     </body>
 </html>
 

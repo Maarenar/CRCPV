@@ -219,7 +219,7 @@
         opacity: 0;
         transition: 1s;   
         @media #{$desktop-query}{
-            max-width: 495px;
+            max-width: 579px;
         }   
         @media #{$tablet-query}{
             width: 100%;
@@ -238,7 +238,7 @@
         opacity: 0;
         transition: 2s; 
         @media #{$desktop-query}{
-            max-width: 495px;
+            max-width: 579px;
         }  
         @media #{$tablet-query}{
             display: none;
