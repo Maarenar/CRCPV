@@ -666,8 +666,18 @@ footer .logo-container img {
 }
 #accueil-formation .page-title {
   top: 80px;
-  left: 100px;
+  left: 79px;
   width: 400px;
+}
+@media all and (max-width: 992px) {
+  #accueil-formation .page-title {
+    left: 20px;
+  }
+}
+@media all and (max-width: 767px) {
+  #accueil-formation .page-title {
+    top: 0;
+  }
 }
 
 #formations-contenu {
@@ -678,10 +688,28 @@ footer .logo-container img {
   width: 100%;
   margin: 150px auto 0 auto;
 }
+@media all and (max-width: 1200px) {
+  #formations-contenu {
+    padding: 20px;
+  }
+}
+@media all and (max-width: 767px) {
+  #formations-contenu {
+    margin-top: 0;
+  }
+}
 #formations-contenu > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 100px;
+}
+@media all and (max-width: 575px) {
+  #formations-contenu > div {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 20px;
+  }
 }
 #formations-contenu .btn {
   margin-top: 50px;
@@ -690,18 +718,63 @@ footer .logo-container img {
 #les-cours {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: -340px;
+  margin-bottom: -250px;
+  z-index: 2;
+  position: relative;
+}
+@media all and (max-width: 1200px) {
+  #les-cours {
+    margin-bottom: -188px;
+  }
+}
+@media all and (max-width: 992px) {
+  #les-cours {
+    margin-bottom: 0;
+    justify-content: center;
+  }
 }
 #les-cours div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 43%;
+  width: 36%;
+  margin-right: 62px;
+}
+@media all and (max-width: 1200px) {
+  #les-cours div {
+    width: 37%;
+    margin-right: 62px;
+  }
+}
+@media all and (max-width: 992px) {
+  #les-cours div {
+    margin-right: 0;
+    width: 100%;
+  }
 }
 
 #negatif {
   width: 100%;
   max-width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+#blog {
+  margin: -200px auto 0 auto;
+  max-width: 1200px;
+  height: 800px;
+}
+@media all and (max-width: 1200px) {
+  #blog {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media all and (max-width: 992px) {
+  #blog {
+    margin-top: 0;
+  }
 }
 
 .main-title {
@@ -813,7 +886,6 @@ main {
   background: url("../assets/img/banc-de-poissons.png") center;
   position: relative;
   top: -6px;
-  padding-top: 100px;
 }
 @media all and (max-width: 767px) {
   main {
@@ -830,11 +902,18 @@ main {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto 100px auto;
+  padding-top: 100px;
 }
 @media all and (max-width: 1200px) {
   .page-container {
-    padding: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
+}
+
+.no-spaces {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .btn {
