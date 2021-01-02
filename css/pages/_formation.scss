@@ -63,6 +63,8 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: -250px;
+    z-index: 2;
+    position: relative;
     @media #{$desktop-query}{
         margin-bottom: -188px;
     }
@@ -91,6 +93,8 @@
 #negatif{
     width: 100%;
     max-width: 100%;
+    z-index: 1;
+    position: relative;
 }
 
 #blog{

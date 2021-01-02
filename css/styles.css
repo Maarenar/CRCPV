@@ -719,6 +719,8 @@ footer .logo-container img {
   display: flex;
   justify-content: flex-end;
   margin-bottom: -250px;
+  z-index: 2;
+  position: relative;
 }
 @media all and (max-width: 1200px) {
   #les-cours {
@@ -754,6 +756,8 @@ footer .logo-container img {
 #negatif {
   width: 100%;
   max-width: 100%;
+  z-index: 1;
+  position: relative;
 }
 
 #blog {
