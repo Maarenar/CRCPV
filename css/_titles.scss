@@ -16,7 +16,6 @@
     color: #ffffff;
     z-index: 2;
     position: relative;
-    padding: 20px;
     @media #{$mobile-query}{
         font-size: 30px;
         margin-top: 100px;
@@ -24,25 +23,29 @@
     &:after{
         content: '';
         position: absolute;
-        left: 20px;
-        bottom: 0;
-        width: 30%;
+        left: 2px;
+        bottom: -15px;
+        width: 160px;
         height: 2px;
         background-color: $blue-lines;
     }
 }
 
 .page-subtitle{
-    padding-left: 20px;
-    @extend .general-text;
+    @include quicksandBold;
+    color: #ffffff;
+    font-size: 30px;
+    @media #{$mobile-query}{
+        font-size: 25px;
+    }
 }
 
 .section-title{
-    font-size: 30px;
+    font-size: 25px;
     @include quicksandRegular;
     color: #ffffff;
     text-transform: uppercase;
     @media #{$small-mobile-query}{
-        font-size: 25px;
+        font-size: 20px;
     }
 }

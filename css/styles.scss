@@ -5,6 +5,7 @@
 
 @import 'pages/home';
 @import 'pages/commission';
+@import 'pages/formation';
 
 @import 'titles';
 
@@ -18,6 +19,18 @@ body{
     box-sizing: border-box;
 }
 
+.general-text{
+    @include openSansLight;
+    font-size: 25px;
+    color: #ffffff;
+    @media #{$small-mobile-query}{
+        font-size: 20px;
+    }
+    &.bold{
+        @include openSansBold;
+    }
+}
+
 p{
     @extend .general-text;
 }
@@ -28,13 +41,8 @@ a{
     color: #ffffff;
 }
 
-.general-text{
-    @include openSansLight;
-    font-size: 25px;
+i{
     color: #ffffff;
-    @media #{$small-mobile-query}{
-        font-size: 20px;
-    }
 }
 
 .blue-text{
@@ -56,19 +64,10 @@ main{
     padding-top: 100px;
 }
 
-.pages-main{
-    .section-title{
-        font-size: 25px;
-    }
-    .general-text{
-        font-size: 20px;
-    }
-}
-
 .page-container{ 
     width: 100%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto 100px auto;
     @media #{$desktop-query}{
         padding: 20px;
     }

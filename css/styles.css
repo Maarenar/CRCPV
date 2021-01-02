@@ -180,7 +180,6 @@ footer .logo-container img {
   width: 100%;
 }
 #accueil .title-container i {
-  color: #ffffff;
   font-size: 40px;
   width: 100%;
   text-align: center;
@@ -512,6 +511,9 @@ footer .logo-container img {
     max-width: 100%;
   }
 }
+.title-and-video div {
+  padding-right: 10px;
+}
 
 #equipe {
   display: flex;
@@ -642,6 +644,66 @@ footer .logo-container img {
   align-items: center;
 }
 
+#accueil-formation {
+  background-image: url("../assets/img/formations/image-accueil.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+#accueil-formation > div {
+  position: absolute;
+  width: 100%;
+}
+#accueil-formation #mask-accueil {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(2, 36, 55, 0.9);
+}
+#accueil-formation .page-title {
+  top: 80px;
+  left: 100px;
+  width: 400px;
+}
+
+#formations-contenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 150px auto 0 auto;
+}
+#formations-contenu > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 100px;
+}
+#formations-contenu .btn {
+  margin-top: 50px;
+}
+
+#les-cours {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -340px;
+}
+#les-cours div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 43%;
+}
+
+#negatif {
+  width: 100%;
+  max-width: 100%;
+}
+
 .main-title {
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
@@ -664,7 +726,6 @@ footer .logo-container img {
   color: #ffffff;
   z-index: 2;
   position: relative;
-  padding: 20px;
 }
 @media all and (max-width: 767px) {
   .page-title {
@@ -675,19 +736,27 @@ footer .logo-container img {
 .page-title:after {
   content: "";
   position: absolute;
-  left: 20px;
-  bottom: 0;
-  width: 30%;
+  left: 2px;
+  bottom: -15px;
+  width: 160px;
   height: 2px;
   background-color: rgba(7, 138, 214, 0.7);
 }
 
 .page-subtitle {
-  padding-left: 20px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 30px;
+}
+@media all and (max-width: 767px) {
+  .page-subtitle {
+    font-size: 25px;
+  }
 }
 
 .section-title {
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
   color: #ffffff;
@@ -695,7 +764,7 @@ footer .logo-container img {
 }
 @media all and (max-width: 575px) {
   .section-title {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 
@@ -709,6 +778,22 @@ body {
   box-sizing: border-box;
 }
 
+.general-text, p, .section-une > p, .section-deux div:first-child p, .section-trois p {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  color: #ffffff;
+}
+@media all and (max-width: 575px) {
+  .general-text, p, .section-une > p, .section-deux div:first-child p, .section-trois p {
+    font-size: 20px;
+  }
+}
+.general-text.bold, p.bold, .section-deux div:first-child p.bold {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 700;
+}
+
 a {
   text-decoration: none;
   font-family: "Open Sans Condensed", sans-serif;
@@ -716,16 +801,8 @@ a {
   color: #ffffff;
 }
 
-.general-text, .section-une > p, .section-deux div:first-child p, .section-trois p, .page-subtitle, p {
-  font-family: "Open Sans Condensed", sans-serif;
-  font-weight: 300;
-  font-size: 25px;
+i {
   color: #ffffff;
-}
-@media all and (max-width: 575px) {
-  .general-text, .section-une > p, .section-deux div:first-child p, .section-trois p, .page-subtitle, p {
-    font-size: 20px;
-  }
 }
 
 .blue-text {
@@ -749,17 +826,10 @@ main {
   padding-top: 100px;
 }
 
-.pages-main .section-title {
-  font-size: 25px;
-}
-.pages-main .general-text, .pages-main .section-deux div:first-child p, .section-deux div:first-child .pages-main p, .pages-main .page-subtitle, .pages-main p {
-  font-size: 20px;
-}
-
 .page-container {
   width: 100%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto 100px auto;
 }
 @media all and (max-width: 1200px) {
   .page-container {
