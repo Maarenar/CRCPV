@@ -19,8 +19,14 @@
     }
     .page-title{
         top: 80px;
-        left: 100px;
+        left: 79px;
         width: 400px;
+        @media #{$tablet-query}{
+            left: 20px;
+        }
+        @media #{$mobile-query}{
+            top: 0;
+        }
     }
 }
 
@@ -31,10 +37,22 @@
     max-width: 1200px;
     width: 100%;
     margin: 150px auto 0 auto;
+    @media #{$desktop-query}{
+        padding: 20px;
+    }
+    @media #{$mobile-query}{
+        margin-top: 0;
+    }
     >div{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 100px;
+        @media #{$small-mobile-query}{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: 0;
+            grid-row-gap: 20px;
+        }
     }
     .btn{
         margin-top: 50px;
@@ -44,18 +62,48 @@
 #les-cours{
     display: flex;
     justify-content: flex-end;
-    margin-bottom: -340px;
+    margin-bottom: -250px;
+    @media #{$desktop-query}{
+        margin-bottom: -188px;
+    }
+    @media #{$tablet-query}{
+        margin-bottom: 0;
+        justify-content: center;
+    }
     div{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 43%;
+        width: 36%;
+        margin-right: 62px;
+        @media #{$desktop-query}{
+            width: 37%;
+            margin-right: 62px;
+        }
+        @media #{$tablet-query}{
+            margin-right: 0;
+            width: 100%;
+        }
+
     }
 }
 
 #negatif{
     width: 100%;
     max-width: 100%;
+}
+
+#blog{
+    margin: -200px auto 0 auto;
+    max-width: 1200px;
+    height: 800px;
+    @media #{$desktop-query}{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    @media #{$tablet-query}{
+        margin-top: 0;
+    }
 }
 
 
