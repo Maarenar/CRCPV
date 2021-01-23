@@ -597,12 +597,12 @@ footer .logo-container img {
 }
 #constitution div {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   column-gap: 0;
   row-gap: 0;
 }
-@media all and (max-width: 575px) {
+@media all and (max-width: 992px) {
   #constitution div {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -627,18 +627,6 @@ footer .logo-container img {
   }
 }
 #contact-and-cr > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-}
-@media all and (max-width: 992px) {
-  #contact-and-cr > div {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-#contact-and-cr > div div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -800,6 +788,33 @@ footer .logo-container img {
   display: block;
 }
 
+.agenda-container {
+  display: flex;
+}
+@media all and (max-width: 767px) {
+  .agenda-container {
+    flex-direction: column;
+  }
+}
+.agenda-container > div:first-child {
+  flex: 2;
+  padding-right: 15px;
+}
+.agenda-container > div:nth-child(2) {
+  flex: 1;
+  background-color: #022437;
+  padding: 30px 40px;
+}
+@media all and (max-width: 575px) {
+  .agenda-container > div:nth-child(2) {
+    padding: 20px;
+  }
+}
+
+.planning-container {
+  margin-top: 50px;
+}
+
 .main-title {
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
@@ -867,6 +882,21 @@ footer .logo-container img {
     font-size: 20px;
   }
 }
+.section-title.underlined {
+  border-bottom: 1px solid rgba(7, 138, 214, 0.7);
+  width: 30%;
+}
+@media all and (max-width: 992px) {
+  .section-title.underlined {
+    width: 50%;
+  }
+}
+@media all and (max-width: 575px) {
+  .section-title.underlined {
+    width: 100%;
+    text-align: center;
+  }
+}
 
 body {
   margin: 0;
@@ -878,20 +908,30 @@ body {
   box-sizing: border-box;
 }
 
-.general-text, p, .section-une > p, .section-deux div:first-child p, .section-trois p {
+.general-text, p, li, .section-une > p, .section-deux div:first-child p, .section-trois p {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: 300;
   font-size: 25px;
   color: #ffffff;
 }
 @media all and (max-width: 575px) {
-  .general-text, p, .section-une > p, .section-deux div:first-child p, .section-trois p {
+  .general-text, p, li, .section-une > p, .section-deux div:first-child p, .section-trois p {
     font-size: 20px;
   }
 }
-.general-text.bold, p.bold, .section-deux div:first-child p.bold {
+.general-text.bold, p.bold, li.bold, .section-deux div:first-child p.bold {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: 700;
+}
+@media all and (max-width: 767px) {
+  .general-text.bold, p.bold, li.bold, .section-deux div:first-child p.bold {
+    margin-top: 0;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 a {

@@ -1,0 +1,22 @@
+.agenda-container{
+    display: flex;
+    @media #{$mobile-query}{
+        flex-direction: column;
+    }
+    >div:first-child{
+        flex: 2;
+        padding-right: 15px;
+    }
+    >div:nth-child(2){
+        flex: 1;
+        background-color: $blue-sections;
+        padding: 30px 40px;
+        @media #{$small-mobile-query}{
+            padding: 20px;
+        }
+    }
+}
+
+.planning-container{
+    margin-top: 50px;
+}

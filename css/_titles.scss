@@ -52,4 +52,15 @@
     @media #{$small-mobile-query}{
         font-size: 20px;
     }
+    &.underlined{
+        border-bottom: 1px solid rgba(7,138,214,0.7);
+        width: 30%;
+        @media #{$tablet-query}{
+            width: 50%;
+        }
+        @media #{$small-mobile-query}{
+            width: 100%;
+            text-align: center;
+        }
+    }
 }
