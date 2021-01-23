@@ -7,6 +7,7 @@
 @import 'pages/commission';
 @import 'pages/formation';
 @import 'pages/contact';
+@import 'pages/_agenda';
 
 @import 'titles';
 
@@ -29,10 +30,18 @@ body{
     }
     &.bold{
         @include openSansBold;
+        @media #{$mobile-query}{
+            margin-top: 0;
+        }
     }
 }
 
-p{
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+p, li{
     @extend .general-text;
 }
 
